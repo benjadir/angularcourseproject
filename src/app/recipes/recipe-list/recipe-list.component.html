@@ -4,12 +4,8 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-xs-12">
-    <a href="#" class="list-group-item clearfix"><span class="pull-left"></span></a>
-    <h4 class="list-group-item-heading">Recipie Name</h4>
-    <p class="list-group-item-text"Description of recipie></p>
-    <span class="pull-right"><img src="" alt="" class="img-responsive" style="max-height: 50px;"/> </span>
-    <app-recipe-item></app-recipe-item>
+  <div class="col-xs-12" >
+    <app-recipe-item *ngFor="let recipe of recipes"  [recipechild]="recipe" (itemDetailEvent)="onRecipeSelected(recipe)"></app-recipe-item>
   </div>
 </div>
 
